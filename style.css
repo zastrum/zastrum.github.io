@@ -1,11 +1,10 @@
 /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* .logo img {
+  height: 50px; /* ajuste conforme quiser */
+  width: auto;
+  display: block;
 }
 
-/* Logo */
 .logo-link {
   display: flex;
   align-items: center;
@@ -21,181 +20,243 @@
 .logo-text {
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  color: #fff; /* ou #000 se o fundo for branco */
   font-family: 'Arial', sans-serif;
   letter-spacing: 1px;
 }
 
-/* Estilo geral */
-body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #fff;
-  color: #000;
-}
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: #000;
-  color: #fff;
-  position: relative;
-}
 
-/* Logo texto */
-.logo a {
-  font-size: 28px;
-  font-weight: bold;
-  color: #fff;
-}
 
-/* Nav padrão */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  width: 100%;
-}
+  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo geral */
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .logo a {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+  }
+  
+  nav a {
+    color: #fff;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+  }
+  
+  nav a:hover {
+    opacity: 0.6;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f8f8;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #333;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  /* Responsivo para telas menores */
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 10px;
+    }
+  
+    .hero h1 {
+      font-size: 32px;
+    }
+  
+    .hero p {
+      font-size: 16px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 10px 25px;
+    }
+  
+    main section {
+      padding: 20px;
+    }
+  }
+  
+  /* Botão flutuante do WhatsApp */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+  
+  .whatsapp-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Redes sociais no rodapé */
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  footer .social-links {
+    margin-top: 15px;
+  }
+  
+  footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: opacity 0.3s ease;
+  }
+  
+  footer .social-links a:hover {
+    opacity: 0.7;
+  }
 
-/* Menu */
-.menu {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
 
-.menu li a {
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  transition: opacity 0.3s ease;
-}
 
-.menu li a:hover {
-  opacity: 0.6;
-}
+
+
+
+
+
+
+  /* Menu padrão */
+  .navbar {
+    display: flex;
+    justify-content: flex-end; /* empurra o conteúdo pro lado direito */
+    align-items: center;
+    position: relative;
+  }
+  
+
+  .menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    color: #fff; /* ou #000 se o fundo for branco */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
 
 /* Ícone do menu hamburguer */
 .menu-toggle {
   display: none;
   font-size: 28px;
   cursor: pointer;
-  color: #fff;
+  color: #fff; /* ou #000 se fundo for claro */
+  padding: 15px;
   position: absolute;
-  top: 20px;
-  right: 40px;
-  z-index: 1000;
-}
-
-/* Hero Section */
-.hero {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #f8f8f8;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-.btn {
-  background-color: #000;
-  color: #fff;
-  padding: 12px 30px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #333;
-}
-
-/* Footer */
-footer {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 30px 20px;
-}
-
-footer .social-links {
-  margin-top: 15px;
-}
-
-footer .social-links a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 20px;
-  transition: opacity 0.3s ease;
-}
-
-footer .social-links a:hover {
-  opacity: 0.7;
-}
-
-/* Botão flutuante do WhatsApp */
-.whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
+  top: 10px;
   right: 20px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: transform 0.3s ease;
+  z-index: 1001;
 }
 
-.whatsapp-btn:hover {
-  transform: scale(1.1);
-}
 
-/* Responsivo para telas menores */
+/* Responsivo */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
   .menu {
     display: none;
     flex-direction: column;
-    background: #000;
+    background: #000; /* ou branco */
     position: absolute;
     top: 60px;
-    right: 0;
-    width: 200px;
-    border: 1px solid #333;
-    padding: 10px;
-    z-index: 999;
+    right: 20px;
+    width: 180px;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1000;
   }
 
   .menu li {
@@ -209,10 +270,7 @@ footer .social-links a:hover {
   .menu-toggle {
     display: block;
   }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-  }
 }
+
+
+  */
