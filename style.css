@@ -199,4 +199,69 @@
   footer .social-links a:hover {
     opacity: 0.7;
   }
+
+
+
+
+
+
+
+
+
+  /* Menu padrão */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu li a {
+  color: #fff; /* ou #000 se fundo for branco */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Ícone do menu hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff; /* ou #000 */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #000; /* cor de fundo do menu aberto */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border: 1px solid #333;
+    padding: 10px;
+    z-index: 999;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
   
